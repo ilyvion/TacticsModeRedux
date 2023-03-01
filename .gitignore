@@ -1,0 +1,10 @@
+# compilation products
+*.dll
+*.pdb
+
+[Bb]in/
+[Oo]bj/
+
+# editor config
+.vscode/
+.vs/
