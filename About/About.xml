@@ -4,11 +4,12 @@
   <authors>
     <li>likeafox</li>
     <li>ELLIOTTCABLE</li>
+    <li>ilyvion</li>
   </authors>
-  <packageId>io.ell.rimworld.tacticsmode</packageId>
-  <url>https://github.com/ELLIOTTCABLE/RimWorld-TacticsMode</url>
+  <packageId>ilyvion.TacticsMode</packageId>
+  <url>https://github.com/ilyvion/TacticsMode</url>
   <supportedVersions>
-    <li>1.4</li>
+    <li>1.5</li>
   </supportedVersions>
   <modDependencies>
     <li>
