@@ -1,23 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Tactics Mode (ec's fork)</name>
-  <authors>
-    <li>likeafox</li>
-    <li>ELLIOTTCABLE</li>
-    <li>ilyvion</li>
-  </authors>
-  <packageId>ilyvion.TacticsMode</packageId>
-  <url>https://github.com/ilyvion/TacticsMode</url>
-  <supportedVersions>
-    <li>1.5</li>
-  </supportedVersions>
-  <modDependencies>
-    <li>
-      <packageId>brrainz.harmony</packageId>
-      <displayName>Harmony</displayName>
-      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
-      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
-    </li>
-  </modDependencies>
-  <description>Finer control over where your pawns go. (resurrected by ELLIOTTCABLE)</description>
+    <packageId>ilyvion.TacticsMode</packageId>
+    <name>Tactics Mode</name>
+    <description>Finer control over what your pawns are doing.</description>
+    <authors>
+        <li>ilyvion</li>
+        <li>likeafox</li>
+        <li>ELLIOTTCABLE</li>
+    </authors>
+    <url>https://github.com/ilyvion/TacticsMode</url>
+    <modVersion>0.1.0</modVersion>
+    <supportedVersions>
+        <li>1.5</li>
+    </supportedVersions>
+    <modDependencies>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+            <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+        </li>
+    </modDependencies>
 </ModMetaData>

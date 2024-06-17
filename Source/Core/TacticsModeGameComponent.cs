@@ -9,58 +9,63 @@ public class TacticsModeGameComponent : GameComponent
 {
     public static TacticsModeGameComponent Current => VerseCurrent.Game.GetComponent<TacticsModeGameComponent>();
 
-    private Dictionary<Pawn, bool> _inTacticsMode = [];
+    private HashSet<Pawn> _pawnsInTacticsMode = [];
     private Dictionary<Pawn, int> _lastActionTick = [];
-    private List<Pawn> scribe_inTacticsMode_keys = [];
-    private List<bool> scribe_inTacticsMode_values = [];
 
-    public TacticsModeGameComponent(Game game) { }
+    public TacticsModeGameComponent(Game _) { }
 
-    public bool LastActionExpired(Pawn p)
+    public bool HasTimeToPauseExpired(Pawn pawn)
     {
-        int lastActionTick;
-        _lastActionTick.TryGetValue(p, out lastActionTick);
-        return Find.TickManager.TicksGame > lastActionTick + 90;
+        _lastActionTick.TryGetValue(pawn, out int lastActionTick);
+        return Find.TickManager.TicksGame > lastActionTick + Settings._tacticalPauseTicks;
     }
 
-    public static bool CanEverBeInTacticsMode(Pawn p)
+    public static bool CanEverBeInTacticsMode(Pawn pawn)
     {
-        return p.IsColonist;
+        return pawn.IsColonist;
     }
 
-    public bool HasTacticsModeToggledOn(Pawn p)
+    public bool HasTacticsModeToggledOn(Pawn pawn)
     {
-        try
+        return _pawnsInTacticsMode.Contains(pawn);
+    }
+
+    public void SetTacticsMode(Pawn pawn, bool putInTacticsMode)
+    {
+        if (!CanEverBeInTacticsMode(pawn))
+            TacticsModeMod.Warning("Tactical mode set on non-player-controlled pawn -- this will have no effect.");
+        if (putInTacticsMode)
         {
-            return _inTacticsMode[p];
+            _pawnsInTacticsMode.Add(pawn);
         }
-        catch { }
-        return false;
-    }
-
-    public void SetTacticsMode(Pawn p, bool v)
-    {
-        if (!CanEverBeInTacticsMode(p))
-            Log.Warning("Tactical mode set on non-player-controlled pawn -- this will have no effect.");
-        _inTacticsMode[p] = v;
+        else
+        {
+            _pawnsInTacticsMode.Remove(pawn);
+        }
     }
 
     public bool IsInTacticsMode(Pawn p)
     {
         return CanEverBeInTacticsMode(p) && p.IsColonistPlayerControlled && HasTacticsModeToggledOn(p);
     }
+
     public override void ExposeData()
     {
         if (Scribe.mode == LoadSaveMode.Saving)
-            Clean();
-        Scribe_Collections.Look(ref _inTacticsMode, "tacticalMode", LookMode.Reference, LookMode.Value,
-            ref scribe_inTacticsMode_keys, ref scribe_inTacticsMode_values);
+        {
+            RemoveDestroyedPawns();
+        }
+
+        Scribe_Collections.Look(ref _pawnsInTacticsMode, "pawnsInTacticsMode", LookMode.Reference);
     }
-    public void Clean()
+
+    public void RemoveDestroyedPawns()
     {
-        var destroyed_pawns = new List<Pawn>(_inTacticsMode.Keys.Where(p => p.Destroyed));
-        foreach (var p in destroyed_pawns)
-            _inTacticsMode.Remove(p);
+        var destroyedPawns = new List<Pawn>(_pawnsInTacticsMode.Where(p => p.Destroyed));
+        foreach (var p in destroyedPawns)
+        {
+            _pawnsInTacticsMode.Remove(p);
+        }
     }
 
     public void TryDoTacticalAction(Pawn p)

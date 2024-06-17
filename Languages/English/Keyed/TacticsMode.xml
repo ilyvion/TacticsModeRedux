@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <TM.TimeToPauseAfter>Pause when finishing any job after it has been more than {0} in game time since last tactical pause</TM.TimeToPauseAfter>
+    <TM.JobsToAlwaysPauseAfter>Jobs to always pause after</TM.JobsToAlwaysPauseAfter>
+
+    <TM.ToggleTacticsModeLabel>Tactics Mode</TM.ToggleTacticsModeLabel>
+    <TM.ToggleTacticsModeDesc>Toggle tactics mode for this colonist. The game will pause and center on the colonist when they finish a job, allowing you to micromanage them.</TM.ToggleTacticsModeDesc>
+</LanguageData>

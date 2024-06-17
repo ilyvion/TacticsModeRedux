@@ -19,9 +19,10 @@ Remove-Item -Path $Target -Recurse -ErrorAction SilentlyContinue
 Copy-Item -Path Assemblies $Target\Assemblies -Recurse
 
 Copy-Item -Path Textures $Target\Textures -Recurse
+Copy-Item -Path Languages $Target\Languages -Recurse
 
 New-Item -Path $Target -ItemType Directory -Name About
 Copy-Item -Path About\About.xml $Target\About
 Copy-Item -Path About\Preview.png $Target\About
-#Copy-Item -Path About\ModIcon.png $Target\About
+Copy-Item -Path About\ModIcon.png $Target\About
 Copy-Item -Path About\PublishedFileId.txt $Target\About
