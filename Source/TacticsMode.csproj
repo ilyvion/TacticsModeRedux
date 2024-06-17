@@ -1,24 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <ProjectGuid>{6DCDA783-9EF4-4ED5-B981-CBA258E0264A}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>TacticsMode</RootNamespace>
-    <AssemblyName>TacticsMode</AssemblyName>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <TargetFramework>net472</TargetFramework>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\Assemblies\</OutputPath>
-    <DefineConstants>TRACE;NDEBUG</DefineConstants>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\Assemblies\</OutputPath>
-    <DefineConstants>TRACE;DEBUG</DefineConstants>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.*" />
-    <PackageReference Include="Lib.Harmony" Version="2.2.2" ExcludeAssets="runtime" />
-  </ItemGroup>
+    <PropertyGroup>
+        <OutputType>Library</OutputType>
+        <TargetFramework>net481</TargetFramework>
+        <PlatformTarget>x64</PlatformTarget>
+        <LangVersion>12.0</LangVersion>
+        <Nullable>enable</Nullable>
+
+        <RootNamespace>TacticsMode</RootNamespace>
+        <AssemblyName>TacticsMode</AssemblyName>
+        <VersionPrefix>0.1.0</VersionPrefix>
+
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <OutputPath>../../$(RimWorldVersion)/Assemblies</OutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <DebugSymbols>false</DebugSymbols>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <DebugType>portable</DebugType>
+        <Optimize>false</Optimize>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Lib.Harmony" Version="2.2.2">
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
+        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.*">
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </PackageReference>
+        <PackageReference Include="Nullable" Version="1.3.1">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+    </ItemGroup>
 </Project>
