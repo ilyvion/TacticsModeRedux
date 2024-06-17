@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace TacticsMode.Patch;
+namespace TacticsModeRedux.Patch;
 
 [HarmonyPatch(typeof(Pawn), nameof(Pawn.GetGizmos))]
 class Verse_Pawn_GetGizmos

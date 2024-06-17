@@ -13,5 +13,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Added settings for which jobs to always pause after, as well as how long of a time to wait for after any job before pausing.
 
-[Unreleased]: https://github.com/ilyvion/TacticsMode/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/ilyvion/TacticsMode/releases/tag/v0.1.0
+[Unreleased]: https://github.com/ilyvion/TacticsModeRedux/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/ilyvion/TacticsModeRedux/releases/tag/v0.1.0

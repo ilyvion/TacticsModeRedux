@@ -7,8 +7,8 @@
         <LangVersion>12.0</LangVersion>
         <Nullable>enable</Nullable>
 
-        <RootNamespace>TacticsMode</RootNamespace>
-        <AssemblyName>TacticsMode</AssemblyName>
+        <RootNamespace>TacticsModeRedux</RootNamespace>
+        <AssemblyName>TacticsModeRedux</AssemblyName>
         <VersionPrefix>0.1.0</VersionPrefix>
 
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>

@@ -3,7 +3,7 @@ using System.Linq;
 
 using VerseCurrent = Verse.Current;
 
-namespace TacticsMode;
+namespace TacticsModeRedux;
 
 public class TacticsModeGameComponent : GameComponent
 {
@@ -33,7 +33,7 @@ public class TacticsModeGameComponent : GameComponent
     public void SetTacticsMode(Pawn pawn, bool putInTacticsMode)
     {
         if (!CanEverBeInTacticsMode(pawn))
-            TacticsModeMod.Warning("Tactical mode set on non-player-controlled pawn -- this will have no effect.");
+            TacticsModeReduxMod.Warning("Tactical mode set on non-player-controlled pawn -- this will have no effect.");
         if (putInTacticsMode)
         {
             _pawnsInTacticsMode.Add(pawn);

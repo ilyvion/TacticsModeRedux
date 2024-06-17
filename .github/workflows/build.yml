@@ -21,12 +21,12 @@ jobs:
                   dotnet-version: 8.0.x
 
             - name: Build Mod
-              run: dotnet build --configuration Release Source/TacticsMode.csproj
+              run: dotnet build --configuration Release Source/TacticsModeRedux.csproj
 
             - name: Upload Mod Artifacts
               uses: actions/upload-artifact@v4
               with:
-                  name: TacticsMode-${{ inputs.artifact-suffix }}
+                  name: TacticsModeRedux-${{ inputs.artifact-suffix }}
                   path: |
                       About/
                       Assemblies/

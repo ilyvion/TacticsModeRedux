@@ -20,7 +20,7 @@ jobs:
         steps:
             - name: Set Environment Variables
               run: |
-                  echo "MOD_PATH=./TacticsMode" >> $GITHUB_ENV
+                  echo "MOD_PATH=./TacticsModeRedux" >> $GITHUB_ENV
                   echo "VERSION=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
                   echo "NO_PREFIX_VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
 
@@ -30,7 +30,7 @@ jobs:
             - name: Download Mod Artifacts from Build Step
               uses: actions/download-artifact@v4
               with:
-                  name: TacticsMode-Release
+                  name: TacticsModeRedux-Release
                   path: ${{ env.MOD_PATH }}
 
             - name: Zip Mod
@@ -62,7 +62,7 @@ jobs:
               with:
                   upload_url: ${{ steps.create_release.outputs.upload_url }}
                   asset_path: ${{ env.MOD_PATH }}.zip
-                  asset_name: TacticsMode-${{ env.VERSION }}.zip
+                  asset_name: TacticsModeRedux-${{ env.VERSION }}.zip
                   asset_content_type: application/zip
 
             # - name: Converts Markdown to Steam markup

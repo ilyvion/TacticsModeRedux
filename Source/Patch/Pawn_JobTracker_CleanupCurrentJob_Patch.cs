@@ -1,6 +1,6 @@
 using Verse.AI;
 
-namespace TacticsMode.Patch;
+namespace TacticsModeRedux.Patch;
 
 [HarmonyPatch(typeof(Pawn_JobTracker), "CleanupCurrentJob")]
 class Verse_AI_Pawn_JobTracker_CleanupCurrentJob
