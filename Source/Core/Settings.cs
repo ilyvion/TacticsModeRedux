@@ -103,9 +103,10 @@ public class Settings : ModSettings
             listingStandard.Gap(4);
         }
 
-        listingStandard.Label("TM.TimeToPauseAfter".Translate(_tacticalPauseTicks.ToStringTicksToPeriod(allowSeconds: false)));
-        _tacticalPauseTicks = (int)listingStandard.Slider(_tacticalPauseTicks, 60, 2500);
-        //listingStandard.TextFieldNumeric(ref _tacticalPauseTicks, ref _tacticalPauseTicksBuffer);
+        listingStandard.Label(_tacticalPauseTicks > 124
+            ? "TM.TimeToPauseAfter".Translate(_tacticalPauseTicks.ToStringTicksToPeriod(allowSeconds: false))
+            : "TM.NeverPauseAfterTime".Translate());
+        _tacticalPauseTicks = (int)listingStandard.Slider(_tacticalPauseTicks, 124, 2500);
 
         Text.Font = GameFont.Medium;
         listingStandard.Label("TM.JobsToAlwaysPauseAfter".Translate());

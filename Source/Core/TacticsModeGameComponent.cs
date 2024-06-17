@@ -16,6 +16,11 @@ public class TacticsModeGameComponent : GameComponent
 
     public bool HasTimeToPauseExpired(Pawn pawn)
     {
+        if (Settings._tacticalPauseTicks <= 124)
+        {
+            return false;
+        }
+
         _lastActionTick.TryGetValue(pawn, out int lastActionTick);
         return Find.TickManager.TicksGame > lastActionTick + Settings._tacticalPauseTicks;
     }
