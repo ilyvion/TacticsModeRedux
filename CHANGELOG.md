@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+-   `JobDef.modContentPack` could be null, which would cause the job list in the settings to be empty
+
 ## [0.2.1] - 2024-06-18
 
 ### Fixed

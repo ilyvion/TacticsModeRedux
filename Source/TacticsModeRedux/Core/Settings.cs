@@ -81,7 +81,7 @@ public partial class Settings : ModSettings
         messageRect.width -= 16f;
 
         scrollRect.height = 0f;
-        foreach (var (name, jobDef) in JobDefHelper.AllJobs.OrderByDescending(j => j.Value.modContentPack.IsOfficialMod))
+        foreach (var (name, jobDef) in JobDefHelper.AllJobs.OrderByDescending(j => j.Value.modContentPack?.IsOfficialMod ?? false))
         {
             string labelText = $"{name} - {jobDef.reportString}";
 
