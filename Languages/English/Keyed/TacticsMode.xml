@@ -3,6 +3,8 @@
     <TM.TimeToPauseAfter>Pause when finishing any job after it has been more than {0} in game time since last tactical pause</TM.TimeToPauseAfter>
     <TM.NeverPauseAfterTime>Never pause when finishing a job not configured below</TM.NeverPauseAfterTime>
     <TM.JobsToAlwaysPauseAfter>Jobs to always pause after</TM.JobsToAlwaysPauseAfter>
+    <TM.MoveCameraAndSelectOnPauseLabel>Pan the camera to and select the colonist who caused a tactical pause</TM.MoveCameraAndSelectOnPauseLabel>
+    <TM.MoveCameraAndSelectOnPauseTooltip>With this setting disabled, the game will still pause, but the game won't pan the camera to the colonist and select it.</TM.MoveCameraAndSelectOnPauseTooltip>
 
     <TM.ToggleTacticsModeLabel>Tactics Mode</TM.ToggleTacticsModeLabel>
     <TM.ToggleTacticsModeDesc>Toggle tactics mode for this colonist. The game will pause and center on the colonist when they finish a job, allowing you to micromanage them.</TM.ToggleTacticsModeDesc>

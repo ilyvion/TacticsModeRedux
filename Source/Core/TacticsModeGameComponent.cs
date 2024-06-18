@@ -77,7 +77,10 @@ public class TacticsModeGameComponent : GameComponent
     {
         if (IsInTacticsMode(p))
         {
-            CameraJumper.TryJumpAndSelect(p);
+            if (Settings._moveCameraOnPause)
+            {
+                CameraJumper.TryJumpAndSelect(p);
+            }
             Find.TickManager.Pause();
             _lastActionTick[p] = Find.TickManager.TicksGame;
         }

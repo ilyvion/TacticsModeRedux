@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+-   Added a setting for turning off the pan-and-select of a colonist on tactical pause
+
 ## [0.1.0] - 2024-04-30
 
 ### Added
