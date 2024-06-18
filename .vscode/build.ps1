@@ -7,7 +7,7 @@ $VersionTargetSuffix = "Mods\TacticsModeRedux"
 $Target = "$VersionTargetPrefix\1.5\$VersionTargetSuffix"
 
 # build dlls
-dotnet build --configuration $Configuration Source/TacticsModeRedux.csproj
+dotnet build --configuration $Configuration Source/TacticsModeRedux/TacticsModeRedux.csproj
 if ($LASTEXITCODE -gt 0) {
     throw "Build failed"
 }

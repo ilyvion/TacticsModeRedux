@@ -15,7 +15,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <OutputPath>../$(RimWorldVersion)/Assemblies</OutputPath>
+        <OutputPath>../../$(RimWorldVersion)/Assemblies</OutputPath>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)' == 'Release'">
