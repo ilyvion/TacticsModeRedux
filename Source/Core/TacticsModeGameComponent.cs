@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using Verse.AI;
 using VerseCurrent = Verse.Current;
@@ -83,10 +84,20 @@ public class TacticsModeGameComponent : GameComponent
             }
             if (Settings._showMessageOnPause)
             {
+                string? curJobReport = null;
+                try
+                {
+                    curJobReport = curJob?.GetReport(p);
+                }
+                catch (Exception e)
+                {
+                    TacticsModeReduxMod.Warning($"Exception when attempting to get job report for finished job message. Falling back to report template. Exception was:\n{e}.");
+                }
+                curJobReport ??= $"<color=#ffeb04>{curJob?.def.reportString}</color>";
                 Messages.Message(
                     "TM.ColonistJustFinishedJobMessage".Translate(
                         p.NameShortColored,
-                        curJob?.GetReport(p) ?? "TM.UnknownJob".Translate()),
+                        curJobReport ?? $"<color=#ff6666>{"TM.UnknownJob".Translate()}</color>"),
                     p,
                     MessageTypeDefOf.TaskCompletion,
                     false);

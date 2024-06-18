@@ -12,5 +12,5 @@
     <TM.ToggleTacticsModeDesc>Toggle tactics mode for this colonist. The game will pause and center on the colonist when they finish a job, allowing you to micromanage them.</TM.ToggleTacticsModeDesc>
 
     <TM.ColonistJustFinishedJobMessage>Tactics mode: {0} just finished {1}</TM.ColonistJustFinishedJobMessage>
-    <TM.UnknownJob>&lt;unknown job&gt;</TM.UnknownJob>
+    <TM.UnknownJob>unknown job</TM.UnknownJob>
 </LanguageData>
