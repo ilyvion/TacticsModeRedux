@@ -7,16 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2024-06-18
+
 ### Added
 
 -   Added a setting for turning off the pan-and-select of a colonist on tactical pause.
 -   Added showing a message when a colonist goes on a tactical pause. This can be turned off in the settings.
 
-## [0.1.0] - 2024-04-30
+## [0.1.0] - 2024-06-17
 
 ### Added
 
 -   Added settings for which jobs to always pause after, as well as how long of a time to wait for after any job before pausing.
 
-[Unreleased]: https://github.com/ilyvion/TacticsModeRedux/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/ilyvion/TacticsModeRedux/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/ilyvion/TacticsModeRedux/releases/tag/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/ilyvion/TacticsModeRedux/releases/tag/v0.1.0
