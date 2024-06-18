@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-
+using Verse.AI;
 using VerseCurrent = Verse.Current;
 
 namespace TacticsModeRedux;
@@ -73,13 +73,23 @@ public class TacticsModeGameComponent : GameComponent
         }
     }
 
-    public void TryDoTacticalAction(Pawn p)
+    public void TryDoTacticalAction(Pawn p, Job? curJob)
     {
         if (IsInTacticsMode(p))
         {
             if (Settings._moveCameraOnPause)
             {
                 CameraJumper.TryJumpAndSelect(p);
+            }
+            if (Settings._showMessageOnPause)
+            {
+                Messages.Message(
+                    "TM.ColonistJustFinishedJobMessage".Translate(
+                        p.NameShortColored,
+                        curJob?.GetReport(p) ?? "TM.UnknownJob".Translate()),
+                    p,
+                    MessageTypeDefOf.TaskCompletion,
+                    false);
             }
             Find.TickManager.Pause();
             _lastActionTick[p] = Find.TickManager.TicksGame;

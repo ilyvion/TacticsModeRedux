@@ -15,7 +15,7 @@ class Verse_AI_Pawn_JobTracker_CleanupCurrentJob
                 || Settings._alwaysPauseJobs.Contains(__instance.curJob.def.defName)
                 || TacticsModeGameComponent.Current.HasTimeToPauseExpired(p)))
         {
-            TacticsModeGameComponent.Current.TryDoTacticalAction(p);
+            TacticsModeGameComponent.Current.TryDoTacticalAction(p, __instance.curJob);
         }
     }
 }

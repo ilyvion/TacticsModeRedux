@@ -9,6 +9,7 @@ public partial class Settings : ModSettings
     internal static bool _printDevMessages = false;
     internal static int _tacticalPauseTicks = 125;
     internal static bool _moveCameraOnPause = true;
+    internal static bool _showMessageOnPause = true;
 
     public override void ExposeData()
     {
@@ -18,6 +19,7 @@ public partial class Settings : ModSettings
         Scribe_Values.Look(ref _tacticalPauseTicks, "tacticalPauseTicks", 125);
         Scribe_Collections.Look(ref _alwaysPauseJobs, "alwaysPauseJobs", LookMode.Value);
         Scribe_Values.Look(ref _moveCameraOnPause, "moveCameraOnPause", true);
+        Scribe_Values.Look(ref _showMessageOnPause, "showMessageOnPause", true);
     }
 
     private static Vector2 scrollPosition;
@@ -39,6 +41,12 @@ public partial class Settings : ModSettings
             "TM.MoveCameraAndSelectOnPauseLabel".Translate(),
             ref _moveCameraOnPause,
             "TM.MoveCameraAndSelectOnPauseTooltip".Translate());
+        listingStandard.Gap(4);
+
+        listingStandard.CheckboxLabeled(
+            "TM.ShowMessageOnPauseLabel".Translate(),
+            ref _showMessageOnPause,
+            "TM.ShowMessageOnPauseTooltip".Translate());
         listingStandard.Gap(4);
 
         listingStandard.Label(_tacticalPauseTicks > 124
