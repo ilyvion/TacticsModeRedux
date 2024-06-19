@@ -7,6 +7,7 @@
     <TM.MoveCameraAndSelectOnPauseTooltip>With this setting disabled, the game will still pause, but the game won't pan the camera to the colonist and select it.</TM.MoveCameraAndSelectOnPauseTooltip>
     <TM.ShowMessageOnPauseLabel>Show a message when a tactical pause happens</TM.ShowMessageOnPauseLabel>
     <TM.ShowMessageOnPauseTooltip>This message will indicate which colonist caused the pause as well as what job they have just finished. This can be especially useful when used in combination with the pan-and-select setting being disabled. Clicking the message will pan-and-select the colonist.</TM.ShowMessageOnPauseTooltip>
+    <TM.AchtungForcedWorkPreventsPauseLabel>Achtung's forced work prevents tactical pause until complete</TM.AchtungForcedWorkPreventsPauseLabel>
 
     <TM.ToggleTacticsModeLabel>Tactics Mode</TM.ToggleTacticsModeLabel>
     <TM.ToggleTacticsModeDesc>Toggle tactics mode for this colonist. The game will pause and center on the colonist when they finish a job, allowing you to micromanage them.</TM.ToggleTacticsModeDesc>

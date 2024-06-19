@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TacticsModeRedux", "Source\TacticsModeRedux\TacticsModeRedux.csproj", "{0BF36ED7-8264-44CE-93EE-9E36275A7B60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TacticsModeRedux.Achtung", "Source\TacticsModeRedux.Achtung\TacticsModeRedux.Achtung.csproj", "{4A6BDDD7-B84A-44FD-993C-D1A2278C99CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0BF36ED7-8264-44CE-93EE-9E36275A7B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BF36ED7-8264-44CE-93EE-9E36275A7B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BF36ED7-8264-44CE-93EE-9E36275A7B60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A6BDDD7-B84A-44FD-993C-D1A2278C99CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A6BDDD7-B84A-44FD-993C-D1A2278C99CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A6BDDD7-B84A-44FD-993C-D1A2278C99CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A6BDDD7-B84A-44FD-993C-D1A2278C99CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+-   Added not pausing when a colonist is performing Achtung!'s forced work. This behavior can be turned off in the settings.
+
 ### Fixed
 
 -   `JobDef.modContentPack` could be null, which would cause the job list in the settings to be empty

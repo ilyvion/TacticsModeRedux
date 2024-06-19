@@ -1,0 +1,6 @@
+<loadFolders>
+    <v1.5>
+        <li>/</li>
+        <li IfModActive="brrainz.achtung">Achtung</li>
+    </v1.5>
+</loadFolders>

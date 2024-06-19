@@ -1,5 +1,8 @@
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+
+[assembly: InternalsVisibleTo("TacticsModeRedux.Achtung")]
 
 namespace TacticsModeRedux;
 
