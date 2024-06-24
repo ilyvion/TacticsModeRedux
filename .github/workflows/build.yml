@@ -30,6 +30,7 @@ jobs:
                   path: |
                       About/
                       Assemblies/
+                      Defs/
                       Languages/
                       Textures/
                       CHANGELOG.md

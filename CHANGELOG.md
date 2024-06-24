@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+-   Added hotkey to tactics mode gizmo. The hotkey is configurable under the keyboard bindings settings menu.
+
+### Changed
+
+-   Made the tactics mode gizmo always come immediately after the draft/undraft gizmo for consistency and to have high priority for its hotkey.
+
 ## [0.3.0] - 2024-06-19
 
 ### Added

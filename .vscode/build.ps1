@@ -25,6 +25,7 @@ Copy-Item -Path Assemblies $Target\Assemblies -Recurse
 # copy interop mod files
 Copy-Item -Path Achtung $Target\Achtung -Recurse
 
+Copy-Item -Path Defs $Target\Defs -Recurse
 Copy-Item -Path Textures $Target\Textures -Recurse
 Copy-Item -Path Languages $Target\Languages -Recurse
 Copy-Item -Path LoadFolders.xml $Target\LoadFolders.xml -Recurse

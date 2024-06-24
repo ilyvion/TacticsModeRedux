@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <KeyBindingDef ParentName="SelectionSpecialKeyBinding">
+        <defName>TM_Command_ToggleTacticsMode</defName>
+        <label>toggle tactics mode</label>
+        <defaultKeyCodeA>M</defaultKeyCodeA>
+    </KeyBindingDef>
+
+</Defs>
