@@ -9,7 +9,7 @@
 
         <RootNamespace>TacticsModeRedux</RootNamespace>
         <AssemblyName>TacticsModeRedux</AssemblyName>
-        <VersionPrefix>0.3.0</VersionPrefix>
+        <VersionPrefix>0.4.0</VersionPrefix>
 
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     </PropertyGroup>
