@@ -19,7 +19,7 @@ class Verse_Pawn_GetGizmos
         {
             var tacticsModeGizmo = new Command_Toggle
             {
-                icon = ContentFinder<UnityEngine.Texture2D>.Get("Buttons/Pawn", true),
+                icon = ContentFinder<UnityEngine.Texture2D>.Get("Buttons/TM_Pawn", true),
                 defaultLabel = "TM.ToggleTacticsModeLabel".Translate(),
                 defaultDesc = "TM.ToggleTacticsModeDesc".Translate(),
                 isActive = () => TacticsModeGameComponent.Current.HasTacticsModeToggledOn(__instance),
