@@ -29,6 +29,7 @@ jobs:
                   name: TacticsModeRedux-${{ inputs.artifact-suffix }}
                   path: |
                       About/
+                      Achtung/
                       Assemblies/
                       Defs/
                       Languages/
