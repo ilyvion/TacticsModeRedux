@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+-   Actually load Achtung integration build artifacts in release.
+
 ## [0.4.1] - 2024-10-04
 
 ### Fixed

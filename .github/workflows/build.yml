@@ -35,6 +35,7 @@ jobs:
                       Languages/
                       Textures/
                       CHANGELOG.md
+                      LoadFolders.xml
                       !**/.*
                       !About/*.pdn
                       !About/*.svg
