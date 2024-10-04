@@ -8,7 +8,7 @@
 
         <RootNamespace>TacticsModeRedux.Achtung</RootNamespace>
         <AssemblyName>TacticsModeRedux.Achtung</AssemblyName>
-        <VersionPrefix>0.4.1</VersionPrefix>
+        <VersionPrefix>0.4.2</VersionPrefix>
 
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 

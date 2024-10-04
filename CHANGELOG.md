@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.2] - 2024-10-04
+
 ### Fixed
 
 -   Actually load Achtung integration build artifacts in release.
@@ -56,7 +58,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Added settings for which jobs to always pause after, as well as how long of a time to wait for after any job before pausing.
 
-[Unreleased]: https://github.com/ilyvion/TacticsModeRedux/compare/v0.4.1...HEAD
+[Unreleased]: https://github.com/ilyvion/TacticsModeRedux/compare/v0.4.2...HEAD
+[0.4.2]: https://github.com/ilyvion/TacticsModeRedux/releases/tag/v0.4.1...v0.4.2
 [0.4.1]: https://github.com/ilyvion/TacticsModeRedux/releases/tag/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/ilyvion/TacticsModeRedux/releases/tag/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/ilyvion/TacticsModeRedux/releases/tag/v0.2.1...v0.3.0
