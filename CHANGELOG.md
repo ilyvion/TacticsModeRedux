@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Rimworld 1.6 support.
 
+### Changed
+
+-   Grouped jobs by mod/DLC in the job list in the settings.
+
 ## [0.4.2] - 2024-10-04
 
 ### Fixed

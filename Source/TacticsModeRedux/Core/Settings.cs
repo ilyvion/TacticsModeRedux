@@ -61,13 +61,13 @@ public partial class Settings : ModSettings
             listingStandard.Gap(4);
         }
 
-        listingStandard.Label(_tacticalPauseTicks > 124
+        _ = listingStandard.Label(_tacticalPauseTicks > 124
             ? "TM.TimeToPauseAfter".Translate(_tacticalPauseTicks.ToStringTicksToPeriod(allowSeconds: false))
             : "TM.NeverPauseAfterTime".Translate());
         _tacticalPauseTicks = (int)listingStandard.Slider(_tacticalPauseTicks, 124, 2500);
 
         Text.Font = GameFont.Medium;
-        listingStandard.Label("TM.JobsToAlwaysPauseAfter".Translate());
+        _ = listingStandard.Label("TM.JobsToAlwaysPauseAfter".Translate());
 
         Text.Font = GameFont.Small;
         searchText = listingStandard.TextEntry(searchText);
@@ -93,28 +93,66 @@ public partial class Settings : ModSettings
         messageRect.width -= 16f;
 
         scrollRect.height = 0f;
-        foreach (var (name, jobDef) in JobDefHelper.AllJobs.OrderByDescending(j => j.Value.modContentPack?.IsOfficialMod ?? false))
+        string? currentModContentPackName = null;
+        foreach (var (name, jobDef) in JobDefHelper.AllJobs
+            .Where(j =>
+            {
+                return !searchOn
+                    || j.Key.IndexOf(searchText, StringComparison.CurrentCultureIgnoreCase) >= 0
+                    || j.Value.reportString.IndexOf(searchText, StringComparison.CurrentCultureIgnoreCase) >= 0;
+            })
+            .OrderByDescending(j => j.Value.modContentPack?.IsOfficialMod ?? false)
+            .ThenBy(j =>
+            {
+                return j.Value.modContentPack?.IsOfficialMod ?? false
+                    ? (j.Value.modContentPack?.Name) switch
+                    {
+                        "Core" => "A",
+                        "Royalty" => "B",
+                        "Ideology" => "C",
+                        "Biotech" => "D",
+                        "Anomaly" => "E",
+                        "Odyssey" => "F",
+                        _ => "G",
+                    }
+                    : j.Value.modContentPack?.Name ?? "Programmatically Added";
+            })
+            )
         {
+            if (currentModContentPackName != (jobDef.modContentPack?.Name ?? "Programmatically Added"))
+            {
+                if (currentModContentPackName != null)
+                {
+                    listingStandard.Gap();
+                    scrollRect.height += 30f;
+                }
+                currentModContentPackName = jobDef.modContentPack?.Name ?? "Programmatically Added";
+                _ = listingStandard.Label($"<b>{currentModContentPackName}</b>");
+                scrollRect.height += 30f;
+            }
+
             string labelText = $"{name} - {jobDef.reportString}";
 
-            if (searchOn && !labelText.ToLower().Contains(searchText.ToLower())) continue;
             labelText = Text.ClampTextWithEllipsis(messageRect, labelText);
-
-            scrollRect.height += 26.1f;
 
             bool isCurrentlyEnabled = _alwaysPauseJobs.Contains(jobDef.defName);
             bool shouldBeEnabled = isCurrentlyEnabled;
             listingStandard.CheckboxLabeled(labelText, ref shouldBeEnabled);
+            scrollRect.height += 30f;
             if (shouldBeEnabled && !isCurrentlyEnabled)
             {
-                _alwaysPauseJobs.Add(jobDef.defName);
+                _ = _alwaysPauseJobs.Add(jobDef.defName);
             }
             else if (!shouldBeEnabled && isCurrentlyEnabled)
             {
-                _alwaysPauseJobs.Remove(jobDef.defName);
+                _ = _alwaysPauseJobs.Remove(jobDef.defName);
             }
         }
 
+        if (Event.current.type == EventType.Layout)
+        {
+            scrollRect.height = listingStandard.CurHeight;
+        }
         listingStandard.End();
         Widgets.EndScrollView();
     }
