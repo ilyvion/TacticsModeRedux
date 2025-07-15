@@ -204,5 +204,18 @@ public partial class Settings : ModSettings
         nameof(JobDefOf.TalkCreepJoiner),
         nameof(JobDefOf.TendEntity),
         nameof(JobDefOf.TransferBetweenEntityHolders),
+#if !v1_5
+        // Odyssey
+        nameof(JobDefOf.Fish),
+        nameof(JobDefOf.GoSwimming),
+        nameof(JobDefOf.GotoOxygenatedArea),
+        nameof(JobDefOf.GotoPatrolDest),
+        nameof(JobDefOf.GotoShip),
+        nameof(JobDefOf.InspectGravEngine),
+        nameof(JobDefOf.PilotConsole),
+        nameof(JobDefOf.PutApparelOnOutfitStand),
+        nameof(JobDefOf.Seal),
+        nameof(JobDefOf.UseOutfitStand),
+#endif
     ];
 }

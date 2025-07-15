@@ -20,7 +20,14 @@ jobs:
               with:
                   dotnet-version: 8.0.x
 
-            - name: Build Mod
+            - name: Build Mod for 1.5
+              env:
+                RimWorldVersion: 1.5
+              run: dotnet build --configuration Release TacticsModeRedux.sln
+
+            - name: Build Mod for 1.6
+              env:
+                RimWorldVersion: 1.6
               run: dotnet build --configuration Release TacticsModeRedux.sln
 
             - name: Upload Mod Artifacts
@@ -29,11 +36,11 @@ jobs:
                   name: TacticsModeRedux-${{ inputs.artifact-suffix }}
                   path: |
                       About/
-                      Achtung/
-                      Assemblies/
-                      Defs/
-                      Languages/
-                      Textures/
+                      Common/
+                      1.5/
+                      1.5_Achtung/
+                      1.6/
+                      1.6_Achtung/
                       CHANGELOG.md
                       LoadFolders.xml
                       !**/.*
