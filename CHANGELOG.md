@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] - 2025-07-15
+
 ### Added
 
 -   Rimworld 1.6 support.
@@ -66,7 +68,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Added settings for which jobs to always pause after, as well as how long of a time to wait for after any job before pausing.
 
-[Unreleased]: https://github.com/ilyvion/TacticsModeRedux/compare/v0.4.2...HEAD
+[Unreleased]: https://github.com/ilyvion/TacticsModeRedux/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/ilyvion/TacticsModeRedux/releases/tag/v0.4.2...v0.5.0
 [0.4.2]: https://github.com/ilyvion/TacticsModeRedux/releases/tag/v0.4.1...v0.4.2
 [0.4.1]: https://github.com/ilyvion/TacticsModeRedux/releases/tag/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/ilyvion/TacticsModeRedux/releases/tag/v0.3.0...v0.4.0
