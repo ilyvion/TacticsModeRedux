@@ -11,6 +11,7 @@ public partial class Settings : ModSettings
     internal static bool _printDevMessages = false;
     internal static int _tacticalPauseTicks = 125;
     internal static bool _moveCameraOnPause = true;
+    internal static bool _selectOnPause = true;
     internal static bool _showMessageOnPause = true;
     internal static bool _achtungForcedWorkPreventsPause = true;
 
@@ -22,6 +23,7 @@ public partial class Settings : ModSettings
         Scribe_Values.Look(ref _tacticalPauseTicks, "tacticalPauseTicks", 125);
         Scribe_Collections.Look(ref _alwaysPauseJobs, "alwaysPauseJobs", LookMode.Value);
         Scribe_Values.Look(ref _moveCameraOnPause, "moveCameraOnPause", true);
+        Scribe_Values.Look(ref _selectOnPause, "selectOnPause", true);
         Scribe_Values.Look(ref _showMessageOnPause, "showMessageOnPause", true);
         Scribe_Values.Look(ref _achtungForcedWorkPreventsPause, "achtungForcedWorkPreventsPause", true);
     }
@@ -42,9 +44,15 @@ public partial class Settings : ModSettings
         }
 
         listingStandard.CheckboxLabeled(
-            "TM.MoveCameraAndSelectOnPauseLabel".Translate(),
+            "TM.MoveCameraOnPauseLabel".Translate(),
             ref _moveCameraOnPause,
-            "TM.MoveCameraAndSelectOnPauseTooltip".Translate());
+            "TM.MoveCameraOnPauseTooltip".Translate());
+        listingStandard.Gap(4);
+
+        listingStandard.CheckboxLabeled(
+            "TM.SelectOnPauseLabel".Translate(),
+            ref _selectOnPause,
+            "TM.SelectOnPauseTooltip".Translate());
         listingStandard.Gap(4);
 
         listingStandard.CheckboxLabeled(

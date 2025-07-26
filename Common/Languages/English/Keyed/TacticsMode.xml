@@ -3,8 +3,10 @@
     <TM.TimeToPauseAfter>Pause when finishing any job after it has been more than {0} in game time since last tactical pause</TM.TimeToPauseAfter>
     <TM.NeverPauseAfterTime>Never pause when finishing a job not configured below</TM.NeverPauseAfterTime>
     <TM.JobsToAlwaysPauseAfter>Jobs to always pause after</TM.JobsToAlwaysPauseAfter>
-    <TM.MoveCameraAndSelectOnPauseLabel>Pan the camera to and select the colonist who caused a tactical pause</TM.MoveCameraAndSelectOnPauseLabel>
-    <TM.MoveCameraAndSelectOnPauseTooltip>With this setting disabled, the game will still pause, but the game won't pan the camera to the colonist and select it.</TM.MoveCameraAndSelectOnPauseTooltip>
+    <TM.MoveCameraOnPauseLabel>Pan the camera to the colonist who caused a tactical pause</TM.MoveCameraOnPauseLabel>
+    <TM.MoveCameraOnPauseTooltip>With this setting disabled, the game will still pause, but the game won't pan the camera to the colonist.</TM.MoveCameraOnPauseTooltip>
+    <TM.SelectOnPauseLabel>Select the colonist who caused a tactical pause</TM.SelectOnPauseLabel>
+    <TM.SelectOnPauseTooltip>With this setting disabled, the game will still pause, but the game won't select the colonist who caused the pause.</TM.SelectOnPauseTooltip>
     <TM.ShowMessageOnPauseLabel>Show a message when a tactical pause happens</TM.ShowMessageOnPauseLabel>
     <TM.ShowMessageOnPauseTooltip>This message will indicate which colonist caused the pause as well as what job they have just finished. This can be especially useful when used in combination with the pan-and-select setting being disabled. Clicking the message will pan-and-select the colonist.</TM.ShowMessageOnPauseTooltip>
     <TM.AchtungForcedWorkPreventsPauseLabel>Achtung's forced work prevents tactical pause until complete</TM.AchtungForcedWorkPreventsPauseLabel>

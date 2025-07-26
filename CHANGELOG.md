@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+-   Split pan camera and select pawn setting into two separate settings.
+
 ## [0.5.0] - 2025-07-15
 
 ### Added

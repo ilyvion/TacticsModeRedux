@@ -78,9 +78,17 @@ public class TacticsModeGameComponent : GameComponent
     {
         if (IsInTacticsMode(p))
         {
-            if (Settings._moveCameraOnPause)
+            if (Settings._moveCameraOnPause && Settings._selectOnPause)
             {
                 CameraJumper.TryJumpAndSelect(p);
+            }
+            else if (Settings._moveCameraOnPause)
+            {
+                CameraJumper.TryJump(p);
+            }
+            else if (Settings._selectOnPause)
+            {
+                CameraJumper.TrySelect(p);
             }
             if (Settings._showMessageOnPause)
             {
